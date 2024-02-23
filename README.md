@@ -235,7 +235,7 @@ set SESSION 2
 
 Now run the exploit!
 
-Give this step a few minutes to complete
+Give this step a few minutes to complete, once the machine stops and you see that a session has opened. press _enter_
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20163853.png)
 
