@@ -73,7 +73,7 @@ I will not show the command used to allow you to research it yourself, but below
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20130732.png)
 
 
-Do your own research and reconnisance on how to input more complex commands. I recommend using the man pages within pentesting tools to get a good understanding of their capabiliteis and how to command them to do them.
+Do your own research and reconnisance on how to input more complex commands. I recommend using the man and help pages within pentesting tools to get a good understanding of their capabiliteis and how to command them to do them.
 
 
 **The best way to learn how to use these machines to their full potential is by using them!** 
