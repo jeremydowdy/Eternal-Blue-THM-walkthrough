@@ -212,7 +212,7 @@ After running that command we need to see what options we are required to set. U
 
 As you can see, the **SESSION** option is required but it is not set.
 
-Before we can set the session, we need to see what sessions are currenty active. This helps to have metasploit running in a second window for you to refrence the help pages. Run the command "help sessions" to see all available options for sessions
+Before we can set the session, we need to see what sessions are currenty active. It helps to have metasploit running in a second window for you to refrence the help pages. Run the command "help sessions" to see all available options for sessions
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20162554.png)
 
