@@ -121,7 +121,7 @@ exploit/windows/smb/ms17_010_eternalblue
 
 Now, as instrtucted in question 3, use the command show options to get the _required_ value you will need to set.
 
-To do this YOU MUST TELL METASPLOIT WHICH MODULE TO USE. As you can see in the list, the exploit we intend to run is Module # 0. 
+To do this YOU MUST TELL METASPLOIT WHICH MODULE TO SHOW OPTIONS FOR OR YOU WILL RECEIVE GLOBAL OPTIONS. As you can see in the list, the exploit we intend to run is Module # 0. 
 
 ### Pro Tip:
 **Utilizing the _help_ command within metasploit will give you insight on commands within metasploit**
