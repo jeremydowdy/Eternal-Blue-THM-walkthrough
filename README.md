@@ -66,7 +66,7 @@ _**be sure to input the active machine IP address inside of THM and not the IP l
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20130522.png)
 
-On top of doing this simple nmap scan _**I recommend you add additional commands on top of nmap to gain additonal information such as version detection and vulnerability detection_**
+On top of doing this simple nmap scan. _**I recommend you add additional commands on top of nmap to gain additonal information such as version detection and vulnerability detection**_
 
 I will not show the command used to allow you to research it yourself, but below is the output I recieved from utilizing multiple commands at once
 
