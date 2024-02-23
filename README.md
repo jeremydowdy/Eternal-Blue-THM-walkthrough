@@ -150,7 +150,7 @@ show options
 ```
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20135917.png)
 
-As you can see from the output, there are muiltiple requirements, all of which are already set. The only option marked required that isn't already set is **RHOSTS**.
+As you can see from the output, there are muiltiple requirements, most of which are already set. The only option marked required that isn't already set is **RHOSTS**.
 
 _** Be sure to follow the instructions on THM before running the exploit**_
 
