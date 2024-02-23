@@ -338,7 +338,7 @@ Then while in terminal run:
 ```bash
 john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
-![alt text]()
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20181804.png)
 
 The cracked password is in orange.
 
