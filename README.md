@@ -64,13 +64,13 @@ nmap -p 0-1000 10.10.168.56
 
 _**be sure to input the active machine IP address inside of THM and not the IP listed in the code box above**_
 
-![alt text](image-2.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20130522.png)
 
 On top of doing this simple nmap scan _**I recommend you add additional commands on top of nmap to gain additonal information such as version detection and vulnerability detection_**
 
 I will not show the command used to allow you to research it yourself, but below is the output I recieved from utilizing multiple commands at once
 
-![alt text](image-3.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20130732.png)
 
 
 Do your own research and reconnisance on how to input more complex commands. I recommend using the man pages within tools to get a good understanding of their capabiliteis and how to command them to do them.
@@ -111,7 +111,7 @@ Now that you have identified the exploit and its exploitation code, now we need 
 search ms17-010
 ```
 your search results should look like this:
-![alt text](<Screenshot 2024-02-22 131322.png>)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20131322.png)
 
 As you can see in the first response, the path to the exploit is 
 
@@ -133,7 +133,7 @@ help
 ```
 Since we are dealing with an exploit module (See **Matching Modules** in the search results from our previous command), you must scroll to module commands to get the available commands when dealing with modules
 
-![alt text](image-7.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20132658.png)
 
 
 Since we are wanting to show options within the Eternal Blue exploit, we will be utilizing module 0. To tell metasploit which module to focus on utilize the _use_ command and specify module 0.
@@ -141,14 +141,14 @@ Since we are wanting to show options within the Eternal Blue exploit, we will be
 ```bash
 use 0
 ```
-![alt text](image-6.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20133821.png)
 
 Now that we have specidifed which module, we want to see what options are available and which ones are required for said exploit. 
 
 ```bash
 show options
 ```
-![alt text](image-8.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134144.png)
 
 As you can see from the output, there are muiltiple requirements, all of which are already set. The only option marked required that isn't already set is **RHOSTS**.
 
@@ -169,7 +169,7 @@ set RHOSTS <target_IP>
 
 _**be sure to fill in the IP of the machine you are using**_
 
-![alt text](image-9.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134603.png)
 
 Now we are ready to run the exploit!
 
@@ -179,7 +179,7 @@ use the command _run_
 run
 ```
 
-![alt text](image-10.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20141651.png)
 
 As you can see, instead of msf6, we are now commanding a Windows machine
 
@@ -192,8 +192,8 @@ Now we need to see how to convert a shell to meterpreter shell in metasploit. Yo
 search shell to meterpreter shell
 ```
 
-![alt text](image-11.png)
-![alt text](image-12.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20161254.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20161317.png)
 
 Take a look at the first picture to see a description of what each column means, and after some digging into the search results, you can see module 58 contains the module path that we are after
 ```bash
@@ -208,13 +208,13 @@ use post/multi/manage/shell_to_meterpreter
 
 After running that command we need to see what options we are required to change. Use the show options command
 
-![alt text](image-13.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20162046.png)
 
 As you can see, the **SESSION** option is required but it is not set.
 
 Before we can set the session, we need to see what sessions are currenty active. This helps to have metasploit running in a second window for you to refrence the help pages. Run the command "help sessions" to see all available options for sessions
 
-![alt text](image-14.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20162554.png)
 
 If we look at the list of available options for sessions, "-l" will list all active sessions
 
@@ -224,38 +224,38 @@ Return to the metasploit window currently running the exploit and sun
 sessions -l
 ```
 
-![alt text](image-15.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20162911.png)
 
 Now we need to set the active session to our target, in my case it was session 2, So I ran the command
 ```bash
 set SESSION 2
 ```
 
-![alt text](image-16.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20163114.png)
 
 Now run the exploit!
 
 Give this step a few minutes to complete
 
-![alt text](image-17.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20163853.png)
 
 Now, again, we need to identify the session of our target, use the sessions -l command to list all sessions and identify our target.
 
-![alt text](image-19.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164151.png)
 
 We can see that our target is running in session 2.
 
 
 For the next step we need to _select_ the session we want to use, _not set_ the session. Lets take another look at the sessions help page to identify which command we need to use
 
-![alt text](image-18.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164304.png)
 
 We need to use the command:
 ```bash
 sessions -i 2
 ```
 
-![alt text](image-20.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164332.png)
 
 As you can see we are now back inside of the windows machine. Now lets get to work!
 
@@ -265,7 +265,7 @@ For this particular case we need to verify that we have escelated all the way to
 
 Run the _whoami_ command
 
-![alt text](image-21.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20165006.png)
 
 Congratulations, this is probably the deepest you will ever be in a Windows computer.
 
@@ -278,16 +278,16 @@ Background this session (use the keyboard shortcut i mentioned earlier)
 
 list your sessions once more, and start up the meterpreter session
 
-![alt text](image-22.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20172002.png)
 
 using the instructions on THM, run getsystem to confirm we have excelated to system privileges. Then run 'shell' then 'whoami'
 
-![alt text](image-23.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20172035.png)
 
 Again following the steps provided by THM, background the session to get back to the meterpreter session again and run the 'ps' command
 
 Pick any process running at NT AUTHORITY/SYSTEM and write down the code. DO NOT USE THE CODE I USE, THEY COULD BE DIFFERENT ON YOUR MACHINE
-![alt text](image-24.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20172901.png)
 
 I am going to go with "" 
 
@@ -295,11 +295,11 @@ Now we need to migrate to that process
 
 THIS WILL TAKE MULTIPLE ATTEMPS. It could kill meterpreter, so start up another meterpreter session if so and keep going at it. (It killed meterpreter 4 times for me before I got it)
 
-![alt text](image-25.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20174453.png)
 
 Now we run the 'hashdump' command 
 
-![alt text](image-26.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20174708.png)
 
 As shown in the screenshot above, we have three users and their hash values, we are looking for the non-default user, in this case it is Jon, as Administrator and Guest accounts are default accounts. 
 
@@ -338,7 +338,7 @@ Then while in terminal run:
 ```bash
 john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
-![alt text](image-27.png)
+![alt text]()
 
 The cracked password is in orange.
 
