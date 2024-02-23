@@ -206,7 +206,7 @@ Now that we have the module path, we need to tell metasploit to _use_ this modul
 use post/multi/manage/shell_to_meterpreter
 ```
 
-After running that command we need to see what options we are required to change. Use the show options command
+After running that command we need to see what options we are required to set. Use the show options command
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20162046.png)
 
