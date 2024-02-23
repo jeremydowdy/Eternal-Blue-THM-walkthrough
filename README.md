@@ -167,7 +167,7 @@ To set the RHOSTS use the command _set_
 set RHOSTS <target_IP>
 ```
 
-_**be sure to fill in the IP of the machine you are using**_
+_**be sure to fill in the IP of the machine you are targeting, for THM it is the active machine IP**_
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20141338.png)
 
