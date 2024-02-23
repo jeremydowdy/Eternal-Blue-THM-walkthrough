@@ -402,9 +402,9 @@ It doesnt seem to be in there, BUT, we do see that our good buddy and target Jon
 ```bash
 cd Jon
 ```
-When we are in Jon's direcatory we sohuld run the ls command to see what Jon is hiding.
+When we are in Jon's direcatory we should run the ls command to see what Jon is hiding.
 
-There is a documents file
+You should notice that there is a documents file
 
 ```bash
 meterpreter > cd Documents
