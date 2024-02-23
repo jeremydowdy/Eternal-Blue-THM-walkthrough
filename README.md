@@ -289,11 +289,9 @@ Again following the steps provided by THM, background the session to get back to
 Pick any process running at NT AUTHORITY/SYSTEM and write down the code. DO NOT USE THE CODE I USE, THEY COULD BE DIFFERENT ON YOUR MACHINE
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20172901.png)
 
-I am going to go with "" 
-
 Now we need to migrate to that process
 
-THIS WILL TAKE MULTIPLE ATTEMPS. It could kill meterpreter, so start up another meterpreter session if so and keep going at it. (It killed meterpreter 4 times for me before I got it)
+THIS WILL TAKE MULTIPLE ATTEMPS. It could kill meterpreter, so start up another meterpreter session if so and keep going at it. Utilize different codes until you have a successful migration.
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20174453.png)
 
