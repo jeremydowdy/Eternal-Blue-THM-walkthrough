@@ -133,7 +133,7 @@ help
 ```
 Since we are dealing with an exploit module (See **Matching Modules** in the search results from our previous command), you must scroll to module commands to get the available commands when dealing with modules
 
-![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20132658.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134603.png)
 
 
 Since we are wanting to show options within the Eternal Blue exploit, we will be utilizing module 0. To tell metasploit which module to focus on utilize the _use_ command and specify module 0.
@@ -141,14 +141,14 @@ Since we are wanting to show options within the Eternal Blue exploit, we will be
 ```bash
 use 0
 ```
-![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20133821.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134144.png)
 
 Now that we have specidifed which module, we want to see what options are available and which ones are required for said exploit. 
 
 ```bash
 show options
 ```
-![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134144.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20135917.png)
 
 As you can see from the output, there are muiltiple requirements, all of which are already set. The only option marked required that isn't already set is **RHOSTS**.
 
@@ -169,7 +169,7 @@ set RHOSTS <target_IP>
 
 _**be sure to fill in the IP of the machine you are using**_
 
-![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20134603.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20141338.png)
 
 Now we are ready to run the exploit!
 
@@ -255,7 +255,7 @@ We need to use the command:
 sessions -i 2
 ```
 
-![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164332.png)
+![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164823.png)
 
 As you can see we are now back inside of the windows machine. Now lets get to work!
 
