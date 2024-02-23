@@ -218,7 +218,7 @@ Before we can set the session, we need to see what sessions are currenty active.
 
 If we look at the list of available options for sessions, "-l" will list all active sessions
 
-Return to the metasploit window currently running the exploit and sun
+Return to the metasploit window currently running the exploit and run
 
 ```bash
 sessions -l
