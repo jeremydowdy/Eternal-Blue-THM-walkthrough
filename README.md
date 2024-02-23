@@ -243,7 +243,7 @@ Now, again, we need to identify the session of our target, use the sessions -l c
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20164151.png)
 
-We can see that our target is running in session 2.
+We can see that our target is running in session 4.
 
 
 For the next step we need to _select_ the session we want to use, _not set_ the session. Lets take another look at the sessions help page to identify which command we need to use
