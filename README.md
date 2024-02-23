@@ -111,6 +111,7 @@ Now that you have identified the exploit and its exploitation code, now we need 
 search ms17-010
 ```
 your search results should look like this:
+
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20131322.png)
 
 As you can see in the first response, the path to the exploit is 
