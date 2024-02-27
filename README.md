@@ -114,7 +114,7 @@ your search results should look like this:
 
 ![alt text](https://github.com/jeremydowdy/Eternal-Blue-THM-walkthrough/blob/main/Screenshot%202024-02-22%20131322.png)
 
-Anything highlighted is a mtch to your search. As you can see in the first response, the path to the exploit is 
+Anything highlighted is a match to your search. As you can see in the first response, the path to the exploit is 
 
 ```bash
 exploit/windows/smb/ms17_010_eternalblue
