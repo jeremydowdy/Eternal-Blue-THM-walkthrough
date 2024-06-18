@@ -275,7 +275,7 @@ Congratulations, this is probably the deepest you will ever be in a Windows comp
 _**This is the highest privileged account in windows operating systems, this account has system-level privileges, allowing it to perform actions and access resources that regular user accounts or even administrator accounts won't be able to. Even as an administrator you cannot access this account without some incredible privilege escelation.**_
 
 
-Background this session (use the keyboard shortcut i mentioned earlier)
+Background this session (use the keyboard shortcut I mentioned earlier)
 
 list your sessions once more, and start up the meterpreter session
 
